@@ -1,0 +1,29 @@
+.main-layout {
+  min-height: 100vh;
+}
+
+.main-layout__content {
+  width: calc(100% - var(--sidebar-width));
+  margin-left: var(--sidebar-width);
+  min-width: 0;
+  transition:
+    margin-left var(--transition-normal),
+    width var(--transition-normal);
+}
+
+.main-layout__content--collapsed {
+  width: calc(100% - var(--sidebar-collapsed-width));
+  margin-left: var(--sidebar-collapsed-width);
+}
+
+.main-layout__main {
+  flex: 1;
+  min-width: 0;
+  padding: 28px 32px;
+}
+
+@media (max-width: 768px) {
+  .main-layout__main {
+    padding: 20px 18px;
+  }
+}
