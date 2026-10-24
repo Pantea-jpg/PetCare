@@ -1,0 +1,45 @@
+.paw-background {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.paw-background__paw {
+  position: absolute;
+  bottom: -40px;
+  color: var(--color-primary);
+  opacity: 0;
+  animation-name: paw-float;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  user-select: none;
+}
+
+@keyframes paw-float {
+  0% {
+    transform: translateY(0) rotate(-20deg);
+    opacity: 0;
+  }
+
+  15% {
+    opacity: 0.12;
+  }
+
+  75% {
+    opacity: 0.12;
+  }
+
+  100% {
+    transform: translateY(-110vh) rotate(20deg);
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .paw-background__paw {
+    animation: none;
+    display: none;
+  }
+}

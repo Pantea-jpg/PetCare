@@ -1,6 +1,7 @@
 import { Outlet, useLocation } from "react-router-dom";
 
 import Sidebar from "./Sidebar";
+import PawBackground from "../common/PawBackground";
 import Header from "./Header";
 import "./MainLayout.css";
 import { useState } from "react";
@@ -44,6 +45,7 @@ export default function MainLayout() {
 
   return (
     <div className="main-layout">
+      <PawBackground />
       <Sidebar isCollapsed={isCollapsed} onToggle={setIsCollapsed} />
 
       <div
